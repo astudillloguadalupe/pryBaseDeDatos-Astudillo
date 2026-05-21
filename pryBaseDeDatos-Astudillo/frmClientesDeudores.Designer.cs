@@ -30,6 +30,9 @@
         {
             this.gbConsulta = new System.Windows.Forms.GroupBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDeuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnListarDeu = new System.Windows.Forms.Button();
             this.lblPromedio = new System.Windows.Forms.Label();
             this.lblCantClie = new System.Windows.Forms.Label();
@@ -37,15 +40,14 @@
             this.lblTotalCli = new System.Windows.Forms.Label();
             this.lblTotalDeuda = new System.Windows.Forms.Label();
             this.lblClientes = new System.Windows.Forms.Label();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDeuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.gbConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbConsulta
             // 
+            this.gbConsulta.Controls.Add(this.btnReporte);
             this.gbConsulta.Controls.Add(this.dgvClientes);
             this.gbConsulta.Controls.Add(this.btnListarDeu);
             this.gbConsulta.Controls.Add(this.lblPromedio);
@@ -75,15 +77,34 @@
             this.dgvClientes.Size = new System.Drawing.Size(369, 203);
             this.dgvClientes.TabIndex = 13;
             // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "Codigo";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.Width = 80;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 170;
+            // 
+            // colDeuda
+            // 
+            this.colDeuda.HeaderText = "Deuda";
+            this.colDeuda.Name = "colDeuda";
+            this.colDeuda.Width = 130;
+            // 
             // btnListarDeu
             // 
             this.btnListarDeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarDeu.Location = new System.Drawing.Point(157, 370);
+            this.btnListarDeu.Location = new System.Drawing.Point(129, 370);
             this.btnListarDeu.Name = "btnListarDeu";
             this.btnListarDeu.Size = new System.Drawing.Size(113, 28);
             this.btnListarDeu.TabIndex = 12;
             this.btnListarDeu.Text = "Listar Deudores";
             this.btnListarDeu.UseVisualStyleBackColor = true;
+            this.btnListarDeu.Click += new System.EventHandler(this.btnListarDeu_Click);
             // 
             // lblPromedio
             // 
@@ -142,23 +163,16 @@
             this.lblClientes.TabIndex = 8;
             this.lblClientes.Text = "Cantidad Clientes:";
             // 
-            // colCodigo
+            // btnReporte
             // 
-            this.colCodigo.HeaderText = "Codigo";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.Width = 80;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 170;
-            // 
-            // colDeuda
-            // 
-            this.colDeuda.HeaderText = "Deuda";
-            this.colDeuda.Name = "colDeuda";
-            this.colDeuda.Width = 130;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.Location = new System.Drawing.Point(248, 370);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(113, 28);
+            this.btnReporte.TabIndex = 14;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // frmClientesDeudores
             // 
@@ -191,5 +205,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDeuda;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

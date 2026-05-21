@@ -26,8 +26,13 @@ namespace pryBaseDeDatos_Astudillo
 
         private void listadoDeTodosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaTodosClientes frm = frmConsultaTodosClientes
+            frmConsultaTodosClientes frm = new frmConsultaTodosClientes();
                 frm.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

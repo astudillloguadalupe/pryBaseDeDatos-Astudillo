@@ -21,5 +21,21 @@ namespace pryBaseDeDatos_Astudillo
         {
 
         }
+
+        private void btnListarDeu_Click(object sender, EventArgs e)
+        {
+            clsClientes x = new clsClientes();
+            x.ListarDeudoresBD(dgvClientes);
+            lblCantClie.Text = x.CantidadDeudores.ToString();
+            lblTotalDeuda.Text = x.TotalDeuda.ToString();
+           // lblPromedio.Text= x.PromDeuda.ToString("0,00");
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            clsClientes x = new clsClientes();
+            x.ReporteClientes();
+            MessageBox.Show("El Reporte se genero correctamente");
+        }
     }
 }
