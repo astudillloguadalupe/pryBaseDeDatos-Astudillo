@@ -31,6 +31,11 @@ namespace pryBaseDeDatos_Astudillo
         {
             get { return cantidad; }
         }
+        public Int32 idCli = 0;
+        public String nom = "";
+        public Decimal deu = 0;
+        public Decimal lim = 0;
+        public Int32 idAu = 0;
         public void ListarClientes(DataGridView Grilla)
         {
             try
@@ -127,6 +132,44 @@ namespace pryBaseDeDatos_Astudillo
 
                 }
                 
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+
+        }
+
+        public void Buscar(int idCliente)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.TableDirect;
+                comando.CommandText = Tabla;
+
+                OleDbDataReader DR = comando.ExecuteReader();
+
+                if (DR.HasRows)
+                {
+                    while (DR.Read())
+                    {
+                        if (DR.GetInt32(0) == idCliente)
+                        {
+                            idCli = DR.GetInt32(0);
+                            nom = DR.GetString(1);
+                            deu = DR.GetDecimal(2);
+                            lim = DR.GetDecimal(3);
+                            idAu = DR.GetInt32(4);
+                        }
+                    }
+                }
+
                 conexion.Close();
             }
             catch (Exception e)

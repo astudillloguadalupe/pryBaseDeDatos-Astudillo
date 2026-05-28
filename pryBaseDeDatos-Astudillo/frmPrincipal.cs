@@ -34,5 +34,11 @@ namespace pryBaseDeDatos_Astudillo
         {
             this.Close();
         }
+
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBusquedaCliente frm = new frmBusquedaCliente();
+            frm.ShowDialog();
+        }
     }
 }
