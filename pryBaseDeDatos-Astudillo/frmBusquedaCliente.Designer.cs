@@ -32,12 +32,12 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.grpDatosCliente = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblDeuda = new System.Windows.Forms.Label();
-            this.lblLimite = new System.Windows.Forms.Label();
-            this.lblLimiteRTA = new System.Windows.Forms.Label();
-            this.lblNombreRTA = new System.Windows.Forms.Label();
             this.lblDeudaRTA = new System.Windows.Forms.Label();
+            this.lblNombreRTA = new System.Windows.Forms.Label();
+            this.lblLimiteRTA = new System.Windows.Forms.Label();
+            this.lblLimite = new System.Windows.Forms.Label();
+            this.lblDeuda = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.grpDatosCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,23 +82,29 @@
             this.grpDatosCliente.TabStop = false;
             this.grpDatosCliente.Text = "Datos del Cliente";
             // 
-            // lblNombre
+            // lblDeudaRTA
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(21, 24);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre:";
+            this.lblDeudaRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDeudaRTA.Location = new System.Drawing.Point(135, 67);
+            this.lblDeudaRTA.Name = "lblDeudaRTA";
+            this.lblDeudaRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblDeudaRTA.TabIndex = 5;
             // 
-            // lblDeuda
+            // lblNombreRTA
             // 
-            this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Location = new System.Drawing.Point(21, 67);
-            this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(42, 13);
-            this.lblDeuda.TabIndex = 1;
-            this.lblDeuda.Text = "Deuda:";
+            this.lblNombreRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombreRTA.Location = new System.Drawing.Point(135, 23);
+            this.lblNombreRTA.Name = "lblNombreRTA";
+            this.lblNombreRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblNombreRTA.TabIndex = 4;
+            // 
+            // lblLimiteRTA
+            // 
+            this.lblLimiteRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLimiteRTA.Location = new System.Drawing.Point(135, 108);
+            this.lblLimiteRTA.Name = "lblLimiteRTA";
+            this.lblLimiteRTA.Size = new System.Drawing.Size(100, 23);
+            this.lblLimiteRTA.TabIndex = 3;
             // 
             // lblLimite
             // 
@@ -109,29 +115,23 @@
             this.lblLimite.TabIndex = 2;
             this.lblLimite.Text = "Limite de Credito:";
             // 
-            // lblLimiteRTA
+            // lblDeuda
             // 
-            this.lblLimiteRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLimiteRTA.Location = new System.Drawing.Point(135, 108);
-            this.lblLimiteRTA.Name = "lblLimiteRTA";
-            this.lblLimiteRTA.Size = new System.Drawing.Size(100, 23);
-            this.lblLimiteRTA.TabIndex = 3;
+            this.lblDeuda.AutoSize = true;
+            this.lblDeuda.Location = new System.Drawing.Point(21, 67);
+            this.lblDeuda.Name = "lblDeuda";
+            this.lblDeuda.Size = new System.Drawing.Size(42, 13);
+            this.lblDeuda.TabIndex = 1;
+            this.lblDeuda.Text = "Deuda:";
             // 
-            // lblNombreRTA
+            // lblNombre
             // 
-            this.lblNombreRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombreRTA.Location = new System.Drawing.Point(135, 23);
-            this.lblNombreRTA.Name = "lblNombreRTA";
-            this.lblNombreRTA.Size = new System.Drawing.Size(100, 23);
-            this.lblNombreRTA.TabIndex = 4;
-            // 
-            // lblDeudaRTA
-            // 
-            this.lblDeudaRTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDeudaRTA.Location = new System.Drawing.Point(135, 67);
-            this.lblDeudaRTA.Name = "lblDeudaRTA";
-            this.lblDeudaRTA.Size = new System.Drawing.Size(100, 23);
-            this.lblDeudaRTA.TabIndex = 5;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(21, 24);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre:";
             // 
             // frmBusquedaCliente
             // 
@@ -146,6 +146,7 @@
             this.Name = "frmBusquedaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Busqueda de Cliente";
+            this.Load += new System.EventHandler(this.frmBusquedaCliente_Load);
             this.grpDatosCliente.ResumeLayout(false);
             this.grpDatosCliente.PerformLayout();
             this.ResumeLayout(false);

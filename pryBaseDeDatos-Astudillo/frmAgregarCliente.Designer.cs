@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.grpCargaDatos = new System.Windows.Forms.GroupBox();
-            this.lblNombreApellido = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNombreApellido = new System.Windows.Forms.TextBox();
-            this.txtLimite = new System.Windows.Forms.TextBox();
-            this.cmbAutoMovil = new System.Windows.Forms.ComboBox();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.cmbAutoMovil = new System.Windows.Forms.ComboBox();
+            this.txtLimite = new System.Windows.Forms.TextBox();
+            this.txtNombreApellido = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombreApellido = new System.Windows.Forms.Label();
             this.grpCargaDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,23 +55,37 @@
             this.grpCargaDatos.TabStop = false;
             this.grpCargaDatos.Text = "Carga de Datos";
             // 
-            // lblNombreApellido
+            // btnCargar
             // 
-            this.lblNombreApellido.AutoSize = true;
-            this.lblNombreApellido.Location = new System.Drawing.Point(23, 39);
-            this.lblNombreApellido.Name = "lblNombreApellido";
-            this.lblNombreApellido.Size = new System.Drawing.Size(95, 13);
-            this.lblNombreApellido.TabIndex = 0;
-            this.lblNombreApellido.Text = "Nombre y Apellido:";
+            this.btnCargar.Location = new System.Drawing.Point(405, 76);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 6;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // label2
+            // cmbAutoMovil
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Limite de Credito:";
+            this.cmbAutoMovil.FormattingEnabled = true;
+            this.cmbAutoMovil.Location = new System.Drawing.Point(183, 121);
+            this.cmbAutoMovil.Name = "cmbAutoMovil";
+            this.cmbAutoMovil.Size = new System.Drawing.Size(155, 21);
+            this.cmbAutoMovil.TabIndex = 5;
+            // 
+            // txtLimite
+            // 
+            this.txtLimite.Location = new System.Drawing.Point(183, 79);
+            this.txtLimite.Name = "txtLimite";
+            this.txtLimite.Size = new System.Drawing.Size(155, 20);
+            this.txtLimite.TabIndex = 4;
+            // 
+            // txtNombreApellido
+            // 
+            this.txtNombreApellido.Location = new System.Drawing.Point(183, 32);
+            this.txtNombreApellido.Name = "txtNombreApellido";
+            this.txtNombreApellido.Size = new System.Drawing.Size(155, 20);
+            this.txtNombreApellido.TabIndex = 3;
             // 
             // label3
             // 
@@ -82,47 +96,35 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "AutoMovil:";
             // 
-            // txtNombreApellido
+            // label2
             // 
-            this.txtNombreApellido.Location = new System.Drawing.Point(183, 32);
-            this.txtNombreApellido.Name = "txtNombreApellido";
-            this.txtNombreApellido.Size = new System.Drawing.Size(155, 20);
-            this.txtNombreApellido.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Limite de Credito:";
             // 
-            // txtLimite
+            // lblNombreApellido
             // 
-            this.txtLimite.Location = new System.Drawing.Point(183, 79);
-            this.txtLimite.Name = "txtLimite";
-            this.txtLimite.Size = new System.Drawing.Size(155, 20);
-            this.txtLimite.TabIndex = 4;
-            // 
-            // cmbAutoMovil
-            // 
-            this.cmbAutoMovil.FormattingEnabled = true;
-            this.cmbAutoMovil.Location = new System.Drawing.Point(183, 121);
-            this.cmbAutoMovil.Name = "cmbAutoMovil";
-            this.cmbAutoMovil.Size = new System.Drawing.Size(155, 21);
-            this.cmbAutoMovil.TabIndex = 5;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.Location = new System.Drawing.Point(405, 76);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 6;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.lblNombreApellido.AutoSize = true;
+            this.lblNombreApellido.Location = new System.Drawing.Point(23, 39);
+            this.lblNombreApellido.Name = "lblNombreApellido";
+            this.lblNombreApellido.Size = new System.Drawing.Size(95, 13);
+            this.lblNombreApellido.TabIndex = 0;
+            this.lblNombreApellido.Text = "Nombre y Apellido:";
             // 
             // frmAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 196);
+            this.ClientSize = new System.Drawing.Size(534, 196);
             this.Controls.Add(this.grpCargaDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmAgregarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Cliente";
+            this.Load += new System.EventHandler(this.frmAgregarCliente_Load);
             this.grpCargaDatos.ResumeLayout(false);
             this.grpCargaDatos.PerformLayout();
             this.ResumeLayout(false);

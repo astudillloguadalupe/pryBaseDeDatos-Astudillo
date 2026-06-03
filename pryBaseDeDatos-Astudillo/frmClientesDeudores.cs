@@ -37,5 +37,10 @@ namespace pryBaseDeDatos_Astudillo
             x.ReporteClientes();
             MessageBox.Show("El Reporte se genero correctamente");
         }
+
+        private void frmClientesDeudores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

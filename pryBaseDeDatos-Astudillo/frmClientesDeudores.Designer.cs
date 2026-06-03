@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbConsulta = new System.Windows.Forms.GroupBox();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +41,6 @@
             this.lblTotalCli = new System.Windows.Forms.Label();
             this.lblTotalDeuda = new System.Windows.Forms.Label();
             this.lblClientes = new System.Windows.Forms.Label();
-            this.btnReporte = new System.Windows.Forms.Button();
             this.gbConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,17 @@
             this.gbConsulta.TabStop = false;
             this.gbConsulta.Text = "Clientes Deudores";
             this.gbConsulta.Enter += new System.EventHandler(this.gbConsulta_Enter);
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.Location = new System.Drawing.Point(248, 370);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(113, 28);
+            this.btnReporte.TabIndex = 14;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // dgvClientes
             // 
@@ -163,17 +174,6 @@
             this.lblClientes.TabIndex = 8;
             this.lblClientes.Text = "Cantidad Clientes:";
             // 
-            // btnReporte
-            // 
-            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.Location = new System.Drawing.Point(248, 370);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(113, 28);
-            this.btnReporte.TabIndex = 14;
-            this.btnReporte.Text = "Reporte";
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
             // frmClientesDeudores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +184,7 @@
             this.Name = "frmClientesDeudores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes Deudores";
+            this.Load += new System.EventHandler(this.frmClientesDeudores_Load);
             this.gbConsulta.ResumeLayout(false);
             this.gbConsulta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();

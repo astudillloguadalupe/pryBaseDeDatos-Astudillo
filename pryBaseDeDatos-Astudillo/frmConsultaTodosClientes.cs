@@ -22,5 +22,10 @@ namespace pryBaseDeDatos_Astudillo
             clsClientes x = new clsClientes();
             x.ListarClientes(dgvConsulta);
         }
+
+        private void frmConsultaTodosClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

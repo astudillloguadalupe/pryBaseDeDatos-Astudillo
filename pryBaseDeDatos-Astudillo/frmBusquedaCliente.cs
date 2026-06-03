@@ -49,5 +49,10 @@ namespace pryBaseDeDatos_Astudillo
                 MessageBox.Show("Cliente no existente");
             }
         }
+
+        private void frmBusquedaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -142,7 +142,7 @@ namespace pryBaseDeDatos_Astudillo
 
         }
 
-        public void Buscar(int idCliente)
+        public void Buscar(Int32 idCliente)
         {
             try
             {
@@ -177,6 +177,41 @@ namespace pryBaseDeDatos_Astudillo
                 MessageBox.Show(e.ToString());
             }
         }
+       
+        public void Agregar()
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.TableDirect;
+                comando.CommandText = Tabla;
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataSet DS = new DataSet();
+                adaptador.Fill(DS, Tabla);
+
+                DataTable tabla = DS.Tables[Tabla];
+                DataRow fila = tabla.NewRow();
+
+                fila["Nombre"] = nom;
+                fila["Deuda"] = 0;
+                fila["Limite"] = lim;
+                fila["Automovil"] = idAu;
+
+                tabla.Rows.Add(fila);
+                OleDbCommandBuilder ConciliaCambios = new OleDbCommandBuilder(adaptador);
+                adaptador.Update(DS, Tabla);
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+
     }
 }
 
