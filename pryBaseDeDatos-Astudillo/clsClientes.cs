@@ -92,6 +92,16 @@ namespace pryBaseDeDatos_Astudillo
                 MessageBox.Show(e.ToString());
             }
         }
+        public Decimal PromDeuda
+        {
+            get
+            {
+                if (cantidad == 0)
+                    return 0;
+
+                return deuda / cantidad;
+            }
+        }
         public void ReporteClientes()
         {
             try
