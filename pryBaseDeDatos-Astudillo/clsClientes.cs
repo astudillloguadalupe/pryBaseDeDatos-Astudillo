@@ -36,6 +36,38 @@ namespace pryBaseDeDatos_Astudillo
         public Decimal deu = 0;
         public Decimal lim = 0;
         public Int32 idAu = 0;
+     
+       
+        public Int32 IDCliente
+        {
+            get { return idCli; }
+            set { idCli = value; }
+        }
+
+        public String Nombre
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+
+        public Decimal Deuda
+        {
+            get { return deu; }
+            set { deu = value; }
+        }
+
+        public Decimal Limite
+        {
+            get { return lim; }
+            set { lim = value; }
+        }
+
+        public Int32 IDAutomovil
+        {
+            get { return idAu; }
+            set { idAu = value; }
+        }
+
         public void ListarClientes(DataGridView Grilla)
         {
             try
@@ -222,6 +254,97 @@ namespace pryBaseDeDatos_Astudillo
             }
         }
 
+        public void Soloestructura (Int32 idCliente)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "";
+
+                
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
+        public void Modificar(Int32 idCliente)
+        {
+            try
+            {
+                String sql = "";
+                sql = " UPDATE Clientes SET Limite = "+ lim.ToString() + "WHERE idCliente = " +  idCliente.ToString();
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = sql;
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
+        public void Eliminar(Int32 idCliente)
+        {
+            try
+            {
+                String sql = "";
+                sql = "DELETE * FROM Cliente WHERW idCliente = " + idCliente.ToString();
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = sql;
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
+        public void AgregarNuevoCliente()
+        {
+            try
+            {
+                String sql = "";
+                sql = "INSERT INTO Cliente (Nombre, Deuda, Limite, idAutomovil)";
+                sql = sql + " VALUES (' "+ nom +"',0," + lim.ToString() + " , " + idAu.ToString() + ")";
+
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = sql;
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
     }
 }
 

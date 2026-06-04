@@ -72,6 +72,12 @@
     <Compile Include="frmConsultaTodosClientes.Designer.cs">
       <DependentUpon>frmConsultaTodosClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarCliente.Designer.cs">
+      <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <EmbeddedResource Include="frmConsultaTodosClientes.resx">
       <DependentUpon>frmConsultaTodosClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarCliente.resx">
+      <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,9 +114,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Content Include="Clientes.ldb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +134,9 @@
     <None Include="Resources\fondo.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Clientes %281%29.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Clientes.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

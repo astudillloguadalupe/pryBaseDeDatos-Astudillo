@@ -35,13 +35,14 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaSobreUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeTodosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesDeudoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesOrdenadosPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.zzzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarNuevosClienteslToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,8 +84,9 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarNuevosClienteslToolStripMenuItem,
             this.buscarClienteToolStripMenuItem,
-            this.consultaSobreUnClienteToolStripMenuItem,
+            this.EditarClienteToolStripMenuItem,
             this.listadoDeTodosLosClientesToolStripMenuItem,
             this.listadoDeClientesDeudoresToolStripMenuItem,
             this.listadoDeClientesOrdenadosPorToolStripMenuItem});
@@ -99,11 +101,12 @@
             this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente...";
             this.buscarClienteToolStripMenuItem.Click += new System.EventHandler(this.buscarClienteToolStripMenuItem_Click);
             // 
-            // consultaSobreUnClienteToolStripMenuItem
+            // EditarClienteToolStripMenuItem
             // 
-            this.consultaSobreUnClienteToolStripMenuItem.Name = "consultaSobreUnClienteToolStripMenuItem";
-            this.consultaSobreUnClienteToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.consultaSobreUnClienteToolStripMenuItem.Text = "Consulta Sobre un cliente...";
+            this.EditarClienteToolStripMenuItem.Name = "EditarClienteToolStripMenuItem";
+            this.EditarClienteToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.EditarClienteToolStripMenuItem.Text = "Editar Cliente";
+            this.EditarClienteToolStripMenuItem.Click += new System.EventHandler(this.EditarClienteToolStripMenuItem_Click);
             // 
             // listadoDeTodosLosClientesToolStripMenuItem
             // 
@@ -144,6 +147,13 @@
             this.zzzToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
             this.zzzToolStripMenuItem.Text = "zzz";
             // 
+            // agregarNuevosClienteslToolStripMenuItem
+            // 
+            this.agregarNuevosClienteslToolStripMenuItem.Name = "agregarNuevosClienteslToolStripMenuItem";
+            this.agregarNuevosClienteslToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.agregarNuevosClienteslToolStripMenuItem.Text = "Agregar Nuevo Cliente...";
+            this.agregarNuevosClienteslToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClienteslToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,11 +183,12 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultaSobreUnClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EditarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeTodosLosClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeClientesDeudoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeClientesOrdenadosPorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zzzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarNuevosClienteslToolStripMenuItem;
     }
 }

@@ -36,5 +36,19 @@ namespace pryBaseDeDatos_Astudillo
             txtLimite.Text = "";
             cmbAutoMovil.SelectedIndex = 0;
         }
+
+        private void btnSQL_Click(object sender, EventArgs e)
+        {
+            clsClientes x = new clsClientes();
+            x.nom = txtNombreApellido.Text;
+            x.lim = Convert.ToDecimal(txtLimite.Text);
+            x.idAu = Convert.ToInt32(cmbAutoMovil.SelectedValue);
+            x.Agregar();
+
+            MessageBox.Show("Datos Grabados");
+            txtNombreApellido.Text = "";
+            txtLimite.Text = "";
+            cmbAutoMovil.SelectedIndex = 0;
+        }
     }
 }

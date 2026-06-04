@@ -36,11 +36,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNombreApellido = new System.Windows.Forms.Label();
+            this.btnSQL = new System.Windows.Forms.Button();
             this.grpCargaDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpCargaDatos
             // 
+            this.grpCargaDatos.Controls.Add(this.btnSQL);
             this.grpCargaDatos.Controls.Add(this.btnCargar);
             this.grpCargaDatos.Controls.Add(this.cmbAutoMovil);
             this.grpCargaDatos.Controls.Add(this.txtLimite);
@@ -114,6 +116,15 @@
             this.lblNombreApellido.TabIndex = 0;
             this.lblNombreApellido.Text = "Nombre y Apellido:";
             // 
+            // btnSQL
+            // 
+            this.btnSQL.Location = new System.Drawing.Point(384, 119);
+            this.btnSQL.Name = "btnSQL";
+            this.btnSQL.Size = new System.Drawing.Size(105, 23);
+            this.btnSQL.TabIndex = 1;
+            this.btnSQL.Text = "Cargar con sql";
+            this.btnSQL.UseVisualStyleBackColor = true;
+            // 
             // frmAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,5 +152,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNombreApellido;
         private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnSQL;
     }
 }
