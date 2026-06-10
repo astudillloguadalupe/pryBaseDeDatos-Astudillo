@@ -52,5 +52,11 @@ namespace pryBaseDeDatos_Astudillo
             frmAgregarCliente frm   = new   frmAgregarCliente();
             frm.ShowDialog();
         }
+
+        private void consultaDeUnClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaClientes_Foreach_ frm = new frmConsultaClientes_Foreach_();  
+            frm.ShowDialog();
+        }
     }
 }

@@ -24,8 +24,25 @@ namespace pryBaseDeDatos_Astudillo
 
         private void frmConsultaClientes_Foreach__Load(object sender, EventArgs e)
         {
+            CrearColumnas();
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            dgvConsulta.Rows.Clear();
+
             clsClientes x = new clsClientes();
             x.ListarForeach(dgvConsulta);
+        }
+        private void CrearColumnas()
+        {
+            dgvConsulta.Columns.Clear();
+
+            dgvConsulta.Columns.Add("Codigo", "Código");
+            dgvConsulta.Columns.Add("Nombre", "Nombre");
+            dgvConsulta.Columns.Add("Deuda", "Deuda");
+            dgvConsulta.Columns.Add("Limite", "Límite");
+            dgvConsulta.Columns.Add("Automovil", "Automóvil");
         }
     }
 }

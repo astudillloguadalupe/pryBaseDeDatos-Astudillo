@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpConsultaDatos = new System.Windows.Forms.GroupBox();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.grpConsultaDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpConsultaDatos
             // 
-            this.groupBox1.Controls.Add(this.dgvConsulta);
-            this.groupBox1.Controls.Add(this.btnListar);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(557, 339);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Consulta de Datos";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.grpConsultaDatos.Controls.Add(this.dgvConsulta);
+            this.grpConsultaDatos.Controls.Add(this.btnListar);
+            this.grpConsultaDatos.Location = new System.Drawing.Point(12, 12);
+            this.grpConsultaDatos.Name = "grpConsultaDatos";
+            this.grpConsultaDatos.Size = new System.Drawing.Size(557, 339);
+            this.grpConsultaDatos.TabIndex = 4;
+            this.grpConsultaDatos.TabStop = false;
+            this.grpConsultaDatos.Text = "Consulta de Datos";
+            this.grpConsultaDatos.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dgvConsulta
             // 
@@ -65,19 +65,20 @@
             this.btnListar.TabIndex = 1;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // frmConsultaClientes_Foreach_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 363);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpConsultaDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmConsultaClientes_Foreach_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Clientes FOREACH";
             this.Load += new System.EventHandler(this.frmConsultaClientes_Foreach__Load);
-            this.groupBox1.ResumeLayout(false);
+            this.grpConsultaDatos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
 
@@ -85,7 +86,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpConsultaDatos;
         private System.Windows.Forms.DataGridView dgvConsulta;
         private System.Windows.Forms.Button btnListar;
     }

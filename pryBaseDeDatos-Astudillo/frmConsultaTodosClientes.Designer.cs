@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpConsultaDatos = new System.Windows.Forms.GroupBox();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.grpConsultaDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpConsultaDatos
             // 
-            this.groupBox1.Controls.Add(this.dgvConsulta);
-            this.groupBox1.Controls.Add(this.btnListar);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(557, 339);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Consulta de Datos";
+            this.grpConsultaDatos.Controls.Add(this.dgvConsulta);
+            this.grpConsultaDatos.Controls.Add(this.btnListar);
+            this.grpConsultaDatos.Location = new System.Drawing.Point(12, 12);
+            this.grpConsultaDatos.Name = "grpConsultaDatos";
+            this.grpConsultaDatos.Size = new System.Drawing.Size(557, 339);
+            this.grpConsultaDatos.TabIndex = 3;
+            this.grpConsultaDatos.TabStop = false;
+            this.grpConsultaDatos.Text = "Consulta de Datos";
             // 
             // dgvConsulta
             // 
@@ -54,6 +54,7 @@
             this.dgvConsulta.RowHeadersVisible = false;
             this.dgvConsulta.Size = new System.Drawing.Size(526, 280);
             this.dgvConsulta.TabIndex = 0;
+            this.dgvConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsulta_CellContentClick);
             // 
             // btnListar
             // 
@@ -71,13 +72,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 357);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpConsultaDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmConsultaTodosClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Todos Clientes";
             this.Load += new System.EventHandler(this.frmConsultaTodosClientes_Load);
-            this.groupBox1.ResumeLayout(false);
+            this.grpConsultaDatos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
 
@@ -85,7 +86,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpConsultaDatos;
         private System.Windows.Forms.DataGridView dgvConsulta;
         private System.Windows.Forms.Button btnListar;
     }

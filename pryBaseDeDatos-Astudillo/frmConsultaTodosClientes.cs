@@ -27,5 +27,10 @@ namespace pryBaseDeDatos_Astudillo
         {
 
         }
+
+        private void dgvConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

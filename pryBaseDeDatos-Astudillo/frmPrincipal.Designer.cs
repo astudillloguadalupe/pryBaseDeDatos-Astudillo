@@ -34,6 +34,7 @@
             this.sobreElDesarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarNuevosClienteslToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeTodosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,7 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.zzzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarNuevosClienteslToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDeUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -89,10 +90,18 @@
             this.EditarClienteToolStripMenuItem,
             this.listadoDeTodosLosClientesToolStripMenuItem,
             this.listadoDeClientesDeudoresToolStripMenuItem,
-            this.listadoDeClientesOrdenadosPorToolStripMenuItem});
+            this.listadoDeClientesOrdenadosPorToolStripMenuItem,
+            this.consultaDeUnClienteToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // agregarNuevosClienteslToolStripMenuItem
+            // 
+            this.agregarNuevosClienteslToolStripMenuItem.Name = "agregarNuevosClienteslToolStripMenuItem";
+            this.agregarNuevosClienteslToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.agregarNuevosClienteslToolStripMenuItem.Text = "Agregar Nuevo Cliente...";
+            this.agregarNuevosClienteslToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClienteslToolStripMenuItem_Click);
             // 
             // buscarClienteToolStripMenuItem
             // 
@@ -147,12 +156,12 @@
             this.zzzToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
             this.zzzToolStripMenuItem.Text = "zzz";
             // 
-            // agregarNuevosClienteslToolStripMenuItem
+            // consultaDeUnClienteToolStripMenuItem
             // 
-            this.agregarNuevosClienteslToolStripMenuItem.Name = "agregarNuevosClienteslToolStripMenuItem";
-            this.agregarNuevosClienteslToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.agregarNuevosClienteslToolStripMenuItem.Text = "Agregar Nuevo Cliente...";
-            this.agregarNuevosClienteslToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClienteslToolStripMenuItem_Click);
+            this.consultaDeUnClienteToolStripMenuItem.Name = "consultaDeUnClienteToolStripMenuItem";
+            this.consultaDeUnClienteToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.consultaDeUnClienteToolStripMenuItem.Text = "Consulta de un cliente...";
+            this.consultaDeUnClienteToolStripMenuItem.Click += new System.EventHandler(this.consultaDeUnClienteToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -190,5 +199,6 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zzzToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarNuevosClienteslToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeUnClienteToolStripMenuItem;
     }
 }
